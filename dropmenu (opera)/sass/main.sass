@@ -1,0 +1,44 @@
+$bgnav: linear-gradient(top, #262626 0%, #070707 100%) !important
+
+ul.w3-navbar
+	border-radius: 5px 5px 0 0
+	border-bottom: 2px solid #2196F3 !important
+	background: $bgnav
+	>li
+		>a:hover
+			background-color: black !important
+	>li
+		position: relative
+	>li:after
+		content: " "
+		display: inline-block
+		position: absolute
+		border: 10px solid
+		border-color: transparent transparent #2196F3 transparent
+		visibility: hidden  //opacity: 0
+		width: 0
+		height: 0
+		bottom: 0
+		left: 48% 	
+	>li:hover:after
+		visibility: visible   //opacity: 1
+
+@media (min-width: 600px)
+	ul.w3-navbar
+		>li:after
+			left: 35%
+
+.w3-dropdown-content
+	background-color: #0fa1e0 !important
+	a:hover
+		background-color: #30708c !important
+		color: white !important
+
+.w3-dropdown-content	
+	min-width: 200px
+	>a
+		border-bottom: 1px dotted white
+	>a:last-child
+		border: none
+
+/*DROP RIGHT*/
